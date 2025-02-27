@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  
+
+  background-color:#ee4d2d ;
+}
+
+/* top navigasi start */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+  margin-bottom: 20px;
+}
+
+.top-nav .left {
+  padding: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.top-nav .left li {
+  list-style: none;
+  margin-right: 5px;
+}
+
+.top-nav .left li a:hover {
+  color: #f2cc8f;
+}
+
+.top-nav .left li span:hover {
+  color: #f2cc8f;
+}
+
+.top-nav .left li a,
+span {
+  color: white;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-nav .right {
+  display: flex;
+}
+
+.top-nav .right a {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.top-nav .right a p{
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-nav .right a:hover {
+  color: #f2cc8f;
+}
+
+/* top navigasi end */
+
+nav {
+  background-color:#ee4d2d;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+nav .logo{
+
+ width: 7.2rem;
+  
+}
+
+nav .logo a img{
+  width: 100%;
+}
+
+/* form input with search button start  */
+form {
+  height: max-content;
+  padding-right: 1px;
+  display: flex;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5px;
+  /* background-color: lightblue; */
+}
+
+form input {
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+input:focus {
+  border: 2px solid #f2cc8f;
+  outline: none;
+}
+
+form button {
+  background-color: transparent;
+  border: 2px solid #dee2e6;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 5px;
+  width: 50px;
+  background-color: #ee4d2d;
+}
+
+form button:active {
+  color: #f2cc8f;
+  border-color: #f2cc8f;
+}
+
+/* form input with search button end  */
+
+
+
+
+
+
+.slider {
+  width: 100%;
+  grid-row: 1 / 3;
+  background-color: lightblue;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.slides {
+  
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  height: 100%;
+  background-color: lightgreen;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  
+  
+}
+
+.controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.right-top, .right-bottom {
+  background-color: #eee;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.right-top img, .right-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll{
+  align-content: center;
+  display: flex;
+  overflow-x: auto; /* Aktifkan scroll horizontal */
+  gap: 16px;        /* Jarak antar ikon */
+  padding: 10px;
+  background-color: lightblue;
+  scrollbar-width: thin; /* Scrollbar tipis untuk Firefox */
+}
+
+.scroll::-webkit-scrollbar {
+  height: 8px; /* Scrollbar tipis untuk Chrome/Edge */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.icon-link img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px; /* Ikon dengan sudut membulat */
+  transition: transform 0.2s ease;
+}
+
+.icon-link img:hover {
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.icon-label {
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+.icon-link span{
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: capitalize;
+}
+
+/* large screen width */
+@media screen and (min-width: 765px) {
+
+  .hero {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height:auto;
+    background-color:white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    justify-content: center;
+    width: 50%;
+  }
+
+  .scroll{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  
+}
+/* mobile width */
+@media screen and (max-width: 765px) {
+  nav {
+    border-bottom: 1px solid white;
+    padding-top: 10px;
+    position: relative;
+    justify-content: space-evenly;
+  }
+  nav form {
+    width: 50%;
+    /* background-color: lightcoral; */
+  }
+
+  nav form input {
+    width: 80%;
+  
+  }
+
+  .hero{
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .right-top,.right-bottom{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .top-nav {
+    display: none;
+  }
+}
